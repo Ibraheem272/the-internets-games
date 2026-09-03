@@ -1,0 +1,394 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background: #080b18;
+color: white;
+min-height: 100vh;
+}
+
+header {
+height: 70px;
+padding: 0 6%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: #0d1124;
+border-bottom: 1px solid #252b45;
+position: sticky;
+top: 0;
+z-index: 10;
+}
+
+.logo {
+font-size: 20px;
+font-weight: bold;
+}
+
+nav {
+display: flex;
+gap: 8px;
+}
+
+nav button {
+background: transparent;
+color: #aaa;
+border: 0;
+padding: 10px 12px;
+cursor: pointer;
+border-radius: 8px;
+}
+
+nav button:hover {
+background: #191f38;
+color: white;
+}
+
+main {
+width: 90%;
+max-width: 1100px;
+margin: auto;
+padding: 50px 0;
+}
+
+.page {
+display: none;
+}
+
+.page.active {
+display: block;
+}
+
+.hero {
+text-align: center;
+padding: 30px 0 45px;
+}
+
+.hero h1 {
+font-size: 42px;
+margin-bottom: 12px;
+}
+
+.hero p {
+color: #9da3bd;
+font-size: 17px;
+}
+
+.event-label {
+color: #8ea2ff;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+margin-bottom: 40px;
+}
+
+.stat {
+background: #10152b;
+border: 1px solid #252b45;
+border-radius: 14px;
+padding: 20px;
+text-align: center;
+}
+
+.stat span {
+display: block;
+font-size: 25px;
+margin-bottom: 8px;
+}
+
+.stat strong {
+display: block;
+font-size: 22px;
+}
+
+.stat small {
+color: #8e94ac;
+}
+
+.world {
+background: #10152b;
+border: 1px solid #252b45;
+border-radius: 20px;
+padding: 30px;
+min-height: 430px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 40px;
+}
+
+.planet {
+width: 100%;
+text-align: center;
+}
+
+.planet-title {
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.island {
+height: 300px;
+max-width: 700px;
+margin: auto;
+border-radius: 50%;
+background: #182d45;
+position: relative;
+overflow: hidden;
+border: 4px solid #294a69;
+}
+
+.building {
+position: absolute;
+font-size: 45px;
+}
+
+.building1 {
+left: 25%;
+top: 35%;
+}
+
+.building2 {
+left: 55%;
+top: 55%;
+}
+
+.building3 {
+left: 70%;
+top: 25%;
+}
+
+.building4 {
+left: 40%;
+top: 65%;
+}
+
+h2 {
+margin: 30px 0 20px;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+}
+
+.card {
+background: #10152b;
+border: 1px solid #252b45;
+border-radius: 14px;
+padding: 22px;
+}
+
+.card-icon {
+font-size: 40px;
+margin-bottom: 15px;
+}
+
+.card p {
+color: #8e94ac;
+margin: 8px 0 15px;
+}
+
+.tag {
+background: #1d2748;
+color: #9fb0ff;
+padding: 5px 9px;
+border-radius: 6px;
+font-size: 12px;
+}
+
+.timer {
+margin: 25px auto 0;
+font-size: 20px;
+color: #9da3bd;
+}
+
+.timer span {
+font-size: 45px;
+font-weight: bold;
+color: white;
+}
+
+.options {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 18px;
+max-width: 750px;
+margin: auto;
+}
+
+.vote-option {
+background: #10152b;
+border: 2px solid #252b45;
+color: white;
+border-radius: 16px;
+padding: 30px;
+cursor: pointer;
+font-size: 18px;
+transition: 0.2s;
+}
+
+.vote-option:hover {
+border-color: #6578d9;
+transform: translateY(-3px);
+}
+
+.vote-option strong,
+.vote-option span {
+display: block;
+margin-top: 8px;
+}
+
+.vote-option span {
+color: #777f9d;
+font-size: 14px;
+}
+
+.message {
+text-align: center;
+margin-top: 25px;
+color: #9fb0ff;
+font-size: 18px;
+}
+
+.profile-header {
+display: flex;
+align-items: center;
+gap: 20px;
+background: #10152b;
+border: 1px solid #252b45;
+border-radius: 18px;
+padding: 30px;
+}
+
+.avatar {
+font-size: 55px;
+background: #1c2440;
+width: 90px;
+height: 90px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+}
+
+.level-card {
+margin-top: 20px;
+background: #10152b;
+border: 1px solid #252b45;
+border-radius: 18px;
+padding: 25px;
+}
+
+.progress {
+height: 12px;
+background: #20263d;
+border-radius: 20px;
+overflow: hidden;
+margin: 15px 0;
+}
+
+#progressBar {
+height: 100%;
+width: 0%;
+background: #6578d9;
+transition: 0.3s;
+}
+
+.badges {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+}
+
+.badge {
+background: #10152b;
+border: 1px solid #252b45;
+border-radius: 14px;
+padding: 22px;
+text-align: center;
+font-size: 35px;
+}
+
+.badge strong,
+.badge small {
+display: block;
+margin-top: 8px;
+}
+
+.badge strong {
+font-size: 16px;
+}
+
+.badge small {
+color: #777f9d;
+font-size: 12px;
+}
+
+.locked {
+opacity: 0.4;
+}
+
+.history {
+max-width: 750px;
+margin: auto;
+}
+
+.history-item {
+padding: 20px;
+border-left: 2px solid #6578d9;
+background: #10152b;
+margin-bottom: 10px;
+border-radius: 0 12px 12px 0;
+}
+
+.history-day {
+color: #8ea2ff;
+font-size: 12px;
+font-weight: bold;
+}
+
+@media (max-width: 700px) {
+
+header {
+height: auto;
+padding: 15px;
+flex-direction: column;
+gap: 10px;
+}
+
+nav {
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.stats {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.cards {
+grid-template-columns: 1fr;
+}
+
+.options {
+grid-template-columns: 1fr;
+}
+
+.badges {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.hero h1 {
+font-size: 30px;
+}
+}
