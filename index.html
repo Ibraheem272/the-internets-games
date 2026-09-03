@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Internet's Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">🌌 THE INTERNET'S GAME</div>
+
+```
+<nav>
+  <button onclick="showPage('universe')">🌎 Universe</button>
+  <button onclick="showPage('vote')">🗳️ Vote</button>
+  <button onclick="showPage('profile')">👤 Profile</button>
+  <button onclick="showPage('history')">📜 History</button>
+</nav>
+```
+
+  </header>
+
+  <main>
+
+```
+<!-- UNIVERSE -->
+<section id="universe" class="page active">
+
+  <div class="hero">
+    <h1>🌌 The Internet's Universe</h1>
+    <p>Everyone on the internet controls this universe.</p>
+  </div>
+
+  <div class="stats">
+
+    <div class="stat">
+      <span>🌎</span>
+      <strong id="worldDay">Day 1</strong>
+      <small>Universe Age</small>
+    </div>
+
+    <div class="stat">
+      <span>👥</span>
+      <strong id="population">1</strong>
+      <small>Players</small>
+    </div>
+
+    <div class="stat">
+      <span>🏗️</span>
+      <strong id="buildings">0</strong>
+      <small>Things Built</small>
+    </div>
+
+    <div class="stat">
+      <span>🏆</span>
+      <strong id="decisions">0</strong>
+      <small>Decisions Made</small>
+    </div>
+
+  </div>
+
+  <div class="world">
+
+    <div class="planet">
+      <div class="planet-title">🌍 INTERNET WORLD</div>
+
+      <div class="island">
+
+        <div class="building building1">🏠</div>
+        <div class="building building2">🌳</div>
+        <div class="building building3">🗿</div>
+        <div class="building building4">🏰</div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <h2>🏗️ Everything Built</h2>
+
+  <div id="buildingsList" class="cards">
+
+    <div class="card">
+      <div class="card-icon">🌳</div>
+      <h3>The First Tree</h3>
+      <p>Created by the Internet</p>
+      <span class="tag">Day 1</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🏠</div>
+      <h3>The First House</h3>
+      <p>Created by the Internet</p>
+      <span class="tag">Day 1</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VOTE -->
+<section id="vote" class="page">
+
+  <div class="hero">
+    <span class="event-label">🌎 GLOBAL DECISION</span>
+
+    <h1 id="question">
+      What should the universe build first?
+    </h1>
+
+    <p>Everyone gets to vote.</p>
+
+    <div class="timer">
+      <span id="timer">30</span>
+      seconds
+    </div>
+  </div>
+
+
+  <div id="options" class="options">
+
+    <button class="vote-option" onclick="vote(0)">
+      🏰
+      <strong>Castle</strong>
+      <span id="votes0">0 votes</span>
+    </button>
+
+    <button class="vote-option" onclick="vote(1)">
+      🏙️
+      <strong>City</strong>
+      <span id="votes1">0 votes</span>
+    </button>
+
+    <button class="vote-option" onclick="vote(2)">
+      🚀
+      <strong>Space Station</strong>
+      <span id="votes2">0 votes</span>
+    </button>
+
+    <button class="vote-option" onclick="vote(3)">
+      🗿
+      <strong>Giant Statue</strong>
+      <span id="votes3">0 votes</span>
+    </button>
+
+  </div>
+
+  <div id="voteMessage" class="message"></div>
+
+</section>
+
+
+<!-- PROFILE -->
+<section id="profile" class="page">
+
+  <div class="profile-header">
+
+    <div class="avatar">👤</div>
+
+    <div>
+      <h1>Citizen #0001</h1>
+      <p>Welcome to the universe.</p>
+    </div>
+
+  </div>
+
+  <div class="level-card">
+
+    <h2>🏅 Citizen</h2>
+
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+
+    <p><span id="xp">0</span> / 100 XP</p>
+
+  </div>
+
+  <h2>🏆 Badges</h2>
+
+  <div class="badges">
+
+    <div class="badge locked">
+      🌱
+      <strong>First Step</strong>
+      <small>Make your first decision</small>
+    </div>
+
+    <div class="badge locked">
+      🏗️
+      <strong>Builder</strong>
+      <small>Help build something</small>
+    </div>
+
+    <div class="badge locked">
+      🗳️
+      <strong>Voter</strong>
+      <small>Vote 10 times</small>
+    </div>
+
+    <div class="badge locked">
+      🌟
+      <strong>Legend</strong>
+      <small>Change the universe</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HISTORY -->
+<section id="history" class="page">
+
+  <div class="hero">
+    <h1>📜 Universe History</h1>
+    <p>Everything that has ever happened.</p>
+  </div>
+
+  <div id="historyList" class="history">
+
+    <div class="history-item">
+      <span class="history-day">DAY 1</span>
+      <p>🌎 The Internet's Universe was created.</p>
+    </div>
+
+    <div class="history-item">
+      <span class="history-day">DAY 1</span>
+      <p>🌳 The First Tree appeared.</p>
+    </div>
+
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
